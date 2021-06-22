@@ -41,8 +41,8 @@ const WorkoutSchema = new Schema(
 );
 
 WorkoutSchema.virtual("totalDuration").get(function () {
-    const duration = this.exercises.reduce((req, res) => {
-        return req + res.duration;
+    const duration = this.exercises.reduce((all, exe) => {
+        return all + exe.duration;
     }, 0);
 
     return duration;

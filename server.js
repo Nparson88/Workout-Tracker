@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/polar-caverns-82114", {
   useNewUrlParser: true,
   useFindAndModify: false,
   useUnifiedTopology: true, 
